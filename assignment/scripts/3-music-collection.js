@@ -2,16 +2,25 @@ console.log("***** Music Collection *****");
 // Safe Zone -- Write code below this line
 let myCollection = [];
 
-function addToCollection(collection, title, artist, yearPublished) {
+function addToCollection(title, artist, yearPublished, collection) {
   let record = {
     title: title,
     artist: artist,
     yearPublished: yearPublished,
   };
   myCollection.push(record);
-  return myCollection;
+  return record;
 }
 addToCollection("Dream of the Beast", "Christina Scabbia", 2023);
+addToCollection("Swallow the Fire", "Melissa Bonny", 2023);
+addToCollection("Raw, Unfiltered Calamity", "DM DOKURO", 2018);
+addToCollection("Archangel", "Thomas Bergersen", 2011);
+addToCollection("Scarlet Hill", "Jacob Marineau", 2016);
+addToCollection(
+  "Chopin: Nocturne No. 1 in B-Flat Minor",
+  "Frédéric Chopin",
+  1830
+);
 console.log(myCollection);
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
