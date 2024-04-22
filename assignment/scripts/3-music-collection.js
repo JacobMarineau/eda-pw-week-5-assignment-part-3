@@ -40,16 +40,18 @@ function findByArtist(collection, artist) {
   for (let i = 0; i < collection.length; i++) {
     if (collection[i].artist === artist) {
       myArr.push(collection[i]);
+      console.log(collection[i].artist);
     }
   }
-  if (myArr === 0) {
-    return undefined;
-  }
-  console.log(artist);
+  console.log(collection.artist);
   return myArr;
 }
 findByArtist(myCollection, "Jacob Marineau");
 findByArtist(myCollection, "No Match");
+findByArtist(myCollection, "Frédéric Chopin");
+findByArtist(myCollection, "Shouldn't be seen by you");
+findByArtist(myCollection, "Archangel");
+findByArtist(myCollection, "Thomas Bergersen");
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
