@@ -53,8 +53,20 @@ findByArtist(myCollection, "Shouldn't be seen by you");
 findByArtist(myCollection, "Archangel");
 findByArtist(myCollection, "Thomas Bergersen");
 
-function search() {}
+const searchCriteria = { artist: "Ray Charles", year: 1957 };
 
+function search(collection, searchCriteria) {
+  let myArr = [];
+  for (let i = 0; i < collection.length; i++)
+    if (
+      collection.year === searchCriteria.year &&
+      collection.artist === searchCriteria.artist
+    ) {
+      myArr.push(collection[i]);
+    }
+  return myArr;
+}
+console.log(search(myCollection, searchCriteria));
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
 // (It's used for automated testing.)
