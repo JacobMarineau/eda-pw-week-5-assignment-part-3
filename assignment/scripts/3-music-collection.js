@@ -53,6 +53,8 @@ findByArtist(myCollection, "Shouldn't be seen by you");
 findByArtist(myCollection, "Archangel");
 findByArtist(myCollection, "Thomas Bergersen");
 
+function search() {}
+
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
 // (It's used for automated testing.)
