@@ -2,7 +2,17 @@ console.log("***** Music Collection *****");
 // Safe Zone -- Write code below this line
 let myCollection = [];
 
-function addToCollection(collection, title, artist, yearPublished) {}
+function addToCollection(collection, title, artist, yearPublished) {
+  let record = {
+    title: title,
+    artist: artist,
+    yearPublished: yearPublished,
+  };
+  myCollection.push(record);
+  return myCollection;
+}
+addToCollection("Dream of the Beast", "Christina Scabbia", 2023);
+console.log(myCollection);
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
