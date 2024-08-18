@@ -56,13 +56,15 @@ findByArtist(myCollection, "Archangel");
 findByArtist(myCollection, "Elrdim");
 
 function search(collection, searchCriteria) {
+  let correct = [];
   for (let i = 0; i < collection.length; i++) {
-    collectionItem = collection[1];
+    const collectionItem = collection[1];
 
     let matched = true;
     for (let key in searchCriteria) {
       if (searchCriteria !== collectionItem) {
         matched = false;
+        break;
       }
     }
     if (matched) {
@@ -71,7 +73,9 @@ function search(collection, searchCriteria) {
   }
   return correct;
 }
-console.log(search(myCollection, { artist: "Jacob Marineau" }));
+console.log(
+  search(myCollection, { artist: "Jacob Marineau", yearPublished: 2016 })
+);
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
