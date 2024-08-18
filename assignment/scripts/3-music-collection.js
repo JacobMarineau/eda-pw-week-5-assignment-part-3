@@ -57,12 +57,15 @@ findByArtist(myCollection, "Elrdim");
 
 function search(collection, searchCriteria) {
   for (let i = 0; i < collection.length; i++) {
-    searchCriteria = collection[1];
+    collectionItem = collection[1];
+
     let matched = true;
     for (let key in searchCriteria)
       if (searchCriteria !== collectionItem) matched = false;
   }
+  if (matched) correct.push(collectionItem);
 }
+return correct;
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
