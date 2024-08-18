@@ -58,7 +58,7 @@ findByArtist(myCollection, "Elrdim");
 function search(collection, searchCriteria) {
   let correct = [];
   for (let i = 0; i < collection.length; i++) {
-    const collectionItem = collection[1];
+    const collectionItem = collection[i];
 
     let matched = true;
     for (let key in searchCriteria) {
