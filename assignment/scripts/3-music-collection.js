@@ -59,7 +59,8 @@ function search(collection, searchCriteria) {
   for (let i = 0; i < collection.length; i++) {
     searchCriteria = collection[1];
     let matched = true;
-    if (searchCriteria === collectionItem) return collectionItem;
+    for (let key in searchCriteria)
+      if (searchCriteria !== collectionItem) matched = false;
   }
 }
 
