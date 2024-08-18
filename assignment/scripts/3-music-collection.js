@@ -62,7 +62,7 @@ function search(collection, searchCriteria) {
 
     let matched = true;
     for (let key in searchCriteria) {
-      if (searchCriteria !== collectionItem) {
+      if (searchCriteria[key] !== collectionItem[key]) {
         matched = false;
         break;
       }
