@@ -12,6 +12,48 @@ function addToCollection(collection, title, artist, yearPublished) {
   collection.push(record);
   return record;
 }
+addToCollection(myCollection, "Gnaal", "Elrdim", 2017);
+addToCollection(myCollection, "Day of Fate", "Team Four Star", 2019);
+addToCollection(myCollection, "Raw, Unfiltered Calamity", "DM DOKURO", 2018);
+addToCollection(myCollection, "Archangel", "Thomas Bergersen", 2011);
+addToCollection(myCollection, "Scarlet Hill", "Jacob Marineau", 2016);
+addToCollection(
+  myCollection,
+  "Chopin: Nocturne No. 1 in B-Flat Minor",
+  "Frédéric Chopin",
+  1830
+);
+
+console.log(myCollection);
+
+function showCollection(collection) {
+  for (let i = 0; i < collection.length; i++) {
+    const record = collection[i];
+    console.log(
+      `${record.title} by ${record.artist}, published in ${record.yearPublished}`
+    );
+  }
+}
+showCollection(myCollection);
+
+function findByArtist(collection, artist) {
+  let myArr = [];
+  for (let i = 0; i < collection.length; i++) {
+    if (collection[i].artist === artist) {
+      myArr.push(collection[i]);
+      console.log(collection[i].artist);
+    }
+  }
+  console.log(collection.artist);
+  return myArr;
+}
+
+findByArtist(myCollection, "Jacob Marineau");
+findByArtist(myCollection, "Not a match");
+findByArtist(myCollection, "Smurf");
+findByArtist(myCollection, "Jacob Marineau");
+findByArtist(myCollection, "Archangel");
+findByArtist(myCollection, "Elrdim");
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
