@@ -60,12 +60,18 @@ function search(collection, searchCriteria) {
     collectionItem = collection[1];
 
     let matched = true;
-    for (let key in searchCriteria)
-      if (searchCriteria !== collectionItem) matched = false;
+    for (let key in searchCriteria) {
+      if (searchCriteria !== collectionItem) {
+        matched = false;
+      }
+    }
+    if (matched) {
+      correct.push(collectionItem);
+    }
   }
-  if (matched) correct.push(collectionItem);
+  return correct;
 }
-return correct;
+console.log(search(myCollection, { artist: "Jacob Marineau" }));
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
